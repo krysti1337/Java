@@ -15,6 +15,7 @@ public class Primitive_Types_Challenge {
         System.out.println("FirstLongVariable = "+ FirstLongVariable);
 
         //metoda corecta
+        //se pune 10L * pentru ca este de tip Long
         long sum2 = 10000L + 10L * (FirstByteVariable + FirstShortVariable + FirstIntVariable);
 
         long SecondLongVariable = sum2;
