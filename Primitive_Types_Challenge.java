@@ -7,9 +7,10 @@ public class Primitive_Types_Challenge {
 
         int FirstIntVariable = 100;
 
-        long sum = (10000 + (int) (FirstIntVariable) + (short) (FirstShortVariable) + (byte) (FirstByteVariable));
-
         //asa este gresit si nu se face in felul dat
+        long sum = (100000 + (int) (FirstIntVariable) + (short) (FirstShortVariable) + (byte) (FirstByteVariable));
+
+
         long FirstLongVariable = (long) sum;
         System.out.println("FirstLongVariable = "+ FirstLongVariable);
 
