@@ -24,6 +24,7 @@ public class Float_values {
 
         intValue = (int) (5 / 2.0);
         System.out.println("intValue: " + intValue);
+        
     }
     
 }
