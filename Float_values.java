@@ -11,6 +11,19 @@ public class Float_values {
         float secfloatValue = (float) 5.25;
 
         System.out.printf("second float: " + secfloatValue);
+
+        System.out.println();
+        intValue = 5 / 2;
+        System.out.println("intValue: " + intValue);
+
+        floatValue = 5f / 3f;
+        System.out.println("floatValue: " + floatValue);
+
+        doubleValue = 5d / 3d;
+        System.out.println("doubleValue: " + doubleValue);
+
+        intValue = (int) (5 / 2.0);
+        System.out.println("intValue: " + intValue);
     }
     
 }
