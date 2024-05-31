@@ -26,6 +26,26 @@ public class Hello {
         if(newValue == 50){
             System.out.println("This is true");
         }
+
+        boolean isCar = false;
+        if (!isCar){
+            System.out.println("This is not supposed to happen");
+        }
+
+        String makeOfCar = "Volkswagen";
+        boolean isDomestic = makeOfCar == "Volkswagen" ? false : true;
+
+        if (isDomestic) {
+            System.out.println("This is domestic to our country");
+        }
+
+        int ageClient = 20;
+        String ageText = ageClient >= 18 ? "OverEighteen" : "Still a kid";
+        System.out.println("Our client is "  + ageText);
+
+        String s = (isDomestic) ? "This car is domestic" : "This car is not domestic";
+
+        System.out.println(s);
     }
 
 }
