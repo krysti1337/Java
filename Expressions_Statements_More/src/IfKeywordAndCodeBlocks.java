@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class IfKeywordAndCodeBlocks {
+public class IfKeywordAndCodeBlocks {
+    public static void main(String[] args) {
+
+    }
 }
