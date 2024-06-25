@@ -14,7 +14,7 @@ public class Seconds_And_Minutes_Challenge {
         if (seconds < 0) {
             return "Invalid data for sedonds (" + seconds + "), must be a positive integer value";
         }
-        int minutes = seconds / 60;
+
         return getDurationString(seconds / 60, seconds % 60);
     }
 
