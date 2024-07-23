@@ -40,7 +40,7 @@ public class Exception_Handling_and_Introduction_to_Scanner {
             try {
                 age = checkData(currentYear, scanner.nextLine());
                 validDOB = age < 0 ? false : true;
-            }catch (NumberFormatException badUserData){ //in case user type wrong number 
+            }catch (NumberFormatException badUserData){ //in case user type wrong number
                 System.out.println("Characters not allowed !!! Try again");
             }
         }while (!validDOB);
