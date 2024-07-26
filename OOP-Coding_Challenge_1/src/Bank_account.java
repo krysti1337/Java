@@ -1,7 +1,28 @@
 public class Bank_account {
 
-    public Bank_account(){
-        
+    public Bank_account() {
+        this(1231, 2.50, "Default name",
+                "Default address", "Default number");
+        System.out.println("Empty constructor called");
+    }
+
+    public Bank_account(int number, double balance, String name, String email, String phone) {
+
+        System.out.println("Account constructor with parameters called");
+
+        this.accountNumber = number;
+        this.customerBalance = balance;
+        this.customerName = name;
+        this.customerEmail = email;
+        this.customerPhone = phone;
+
+    }
+
+    public Bank_account(String customerName, String customerEmail, String customerPhone) {
+        this(9999, 100.55, customerName, customerEmail, customerPhone);
+//        this.customerName = customerName;
+//        this.customerEmail = customerEmail;
+//        this.customerPhone = customerPhone;
     }
 
     private int accountNumber;
@@ -17,10 +38,10 @@ public class Bank_account {
 
     }
 
-    public void withdrawFunds(double withdrawalAmount){
-        if(this.customerBalance - withdrawalAmount < 0) {
+    public void withdrawFunds(double withdrawalAmount) {
+        if (this.customerBalance - withdrawalAmount < 0) {
             System.out.println("Insufficient Funds! You only have $" + this.customerBalance + " in your account.");
-        } else{
+        } else {
             this.customerBalance -= withdrawalAmount;
             System.out.println("Withdrawal of $ " + withdrawalAmount + " processed, Remaining balance = $" + this.customerBalance);
         }
