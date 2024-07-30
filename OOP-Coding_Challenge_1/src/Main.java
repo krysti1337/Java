@@ -6,8 +6,9 @@ public class Main {
         bankAccount();
         System.out.println("----------------");
 
-//        simpleCalculator();
-//        person();
+        simpleCalculator();
+        person();
+        customer();
 
 
     }
@@ -70,5 +71,21 @@ public class Main {
         System.out.println("fullName= " + person.getFullName());
         person.setAge(-5);
         System.out.println("Age: " + person.getAge());
+    }
+
+    public static void customer(){
+
+        Customer customer = new Customer("Cris", 1000, "crisemail@gmail.com");
+
+        System.out.println(customer.getName());
+        System.out.println(customer.getCreditLimid());
+        System.out.println(customer.getEmailAddress());
+
+        Customer secondCustomer = new Customer();
+
+        System.out.println(secondCustomer.getName());
+        System.out.println(secondCustomer.getCreditLimid());
+        System.out.println(secondCustomer.getEmailAddress());
+
     }
 }
