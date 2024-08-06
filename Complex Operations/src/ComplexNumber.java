@@ -15,24 +15,28 @@ public class ComplexNumber {
         return imaginary;
     }
 
-    public void add(ComplexNumber n1, ComplexNumber n2){
-
-        ComplexNumber res = new ComplexNumber(0, 0);
-
-        res.real = n1.real + n2.real;
-        res.imaginary = n1.imaginary + n2.imaginary;
-
-        return res;
+    public void add(double real, double imaginary){
+        this.real += real;
+        this.imaginary += imaginary;
     }
 
-    public  ComplexNumber subtract(ComplexNumber n1, ComplexNumber n2){
+    public void add(ComplexNumber another){
 
-        ComplexNumber sub = new ComplexNumber(0, 0);
+        this.real += another.real;
+        this.imaginary += another.imaginary;
 
-        sub.real = n1.real - n2.real;
-        sub.imaginary = n1.imaginary - n2.imaginary;
+    }
 
-        return sub;
+    public void subtract(double real, double imaginary){
+        this.real -= real;
+        this.imaginary -= imaginary;
+    }
+
+    public void subtract(ComplexNumber another){
+
+        this.real -= another.real;
+        this.imaginary -= another.imaginary;
+
     }
 
 }
