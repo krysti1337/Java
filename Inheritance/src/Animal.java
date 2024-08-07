@@ -1,6 +1,6 @@
 public class Animal {
 
-    private String type;
+    protected String type; //lasam subclasele clasei Animal sa foloseasca type
     private String size;
     private double weight;
 
@@ -24,7 +24,7 @@ public class Animal {
     }
 
     public void move(String speed){
-        System.out.println(type +  "move " + speed);
+        System.out.println(type +  " move " + speed);
     }
 
     public void makeNoise(){
