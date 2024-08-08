@@ -92,5 +92,6 @@ public class Main {
 
         System.out.printf("Last char = %c %n", string.charAt(length-1));
 
+
     }
 }
