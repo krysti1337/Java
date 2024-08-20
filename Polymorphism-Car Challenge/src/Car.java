@@ -1,7 +1,11 @@
+import java.util.Scanner;
+
 public class Car {
     private String description;
     private String name;
+    private String type;
     private boolean isEngineStarted;
+    protected String input;
 
     public Car(String name){
         this.name = name;
@@ -40,8 +44,23 @@ public class Car {
     public void theCarIs(){
 
         String instanceDescription = this.getClass().getSimpleName();
-        System.out.println(name + " is a " + instanceDescription + " car ");
 
+        String carType;
+
+        carType = switch (instanceDescription) {
+            case "ElectricCar" -> "Electric car ";
+            case "GasPoweredCar" -> "Gas powered car ";
+            case "HybridCar" -> "Hybrid car ";
+            default -> "Car is";
+        };
+
+        System.out.println(name + " is a " + carType);
+
+        infoAboutCar();
+    }
+
+    public void infoAboutCar(){
+        System.out.println(" Enter the info about this car ");
     }
 
 //    public void infoCar(){
