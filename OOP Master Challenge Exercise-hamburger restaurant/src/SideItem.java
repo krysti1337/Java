@@ -50,10 +50,9 @@ public class SideItem{
 
     @Override
     public String toString() {
-        return "SideItem{" +
-                "name='" + name + '\'' +
+        return "name='" + name + '\'' +
                 ", size='" + size + '\'' +
                 ", price=" + price +
-                '}';
+                " ";
     }
 }

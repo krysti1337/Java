@@ -54,10 +54,9 @@ public class Burger{
 
     @Override
     public String toString() {
-        return "Burger{" +
-                "price=" + price +
+        return "price=" + price +
                 ", size='" + size + '\'' +
                 ", name='" + name + '\'' +
-                '}';
+                " ";
     }
 }
