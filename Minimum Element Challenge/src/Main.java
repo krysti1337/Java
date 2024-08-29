@@ -29,10 +29,8 @@ public class Main {
         int[] tempArray = Arrays.copyOf(array, array.length);
         int min = 0;
         for (int i = 0; i < tempArray.length; i++) {
-            if (tempArray[i] < tempArray[i + 1]) {
-                min = tempArray[i];
-            } else {
-                min = tempArray[i + 1];
+            if(array[i] < min){
+                min = array[i];
             }
             i++;
         }
