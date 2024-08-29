@@ -35,11 +35,11 @@ public class Main {
             int tem = array[i];
 
             // Atribuirea primei reprize
-            // până la ultima jumătate
+            // Până la ultima jumătate
             array[i] = array[n - i - 1];
 
             // Atribuirea ultimei reprize
-            // la prima jumătate
+            // La prima jumătate
             array[n - i - 1] = tem;
         }
     }
