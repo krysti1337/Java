@@ -8,10 +8,11 @@ public class Main {
         int[] array = readIntegers();
         System.out.println(Arrays.toString(array));
         findMin(array);
+        reverse(array);
 
     }
 
-    public static int[] readIntegers(int... number) {
+    private static int[] readIntegers(int... number) {
         Scanner s = new Scanner(System.in);
 
         System.out.println("Enter the range of array :");
@@ -25,9 +26,9 @@ public class Main {
         return num;
     }
 
-    public static void findMin(int[] array) {
+    private static void findMin(int[] array) {
         int[] tempArray = Arrays.copyOf(array, array.length);
-        int min = 0;
+        int min = Integer.MAX_VALUE;
         for (int i = 0; i < tempArray.length; i++) {
             if(array[i] < min){
                 min = array[i];
@@ -36,4 +37,18 @@ public class Main {
         }
        System.out.println("Min = " + min);
     }
+
+    private static void reverse(int[] array){
+        int[] reverse = Arrays.copyOf(array, array.length);
+
+        for(int i  = 0; i < reverse.length / 2; i ++){
+            int tem = reverse[i];
+            reverse[i] = reverse[reverse.length - i - 1];
+            reverse[reverse.length - i - 1] = tem;
+        }
+
+        System.out.println(Arrays.toString(reverse));
+    }
+
+
 }
