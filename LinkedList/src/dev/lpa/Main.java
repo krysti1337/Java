@@ -1,6 +1,7 @@
 package dev.lpa;
 
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 public class Main {
 
@@ -13,13 +14,21 @@ public class Main {
         System.out.println(placeToVisit);
 
         addMoreElements(placeToVisit);
-        System.out.println(placeToVisit);;
-
-        removeElements(placeToVisit);
         System.out.println(placeToVisit);
+        ;
+
+//        removeElements(placeToVisit);
+//        System.out.println(placeToVisit);
+
+//        gettingElements(placeToVisit);
+
+        printItinerary(placeToVisit);
+        printItinerary2(placeToVisit);
+        printItinerary3(placeToVisit);
+
     }
 
-    private static void addMoreElements(LinkedList<String> list){
+    private static void addMoreElements(LinkedList<String> list) {
 
         list.addFirst("Darwin");
         list.addLast("Hobart");
@@ -31,7 +40,7 @@ public class Main {
         list.push("Alice Springs"); //[Alice Springs, Brisbane, Darwin, Canberra, Sydney, Hobart, Melbourne, Toowoomba]
     }
 
-    private static void removeElements(LinkedList<String> list){
+    private static void removeElements(LinkedList<String> list) {
 
         list.remove(4);
         list.remove("Brisbane");
@@ -75,5 +84,63 @@ public class Main {
 
 //      Canberra was removed
 //      [Brisbane, Sydney]
+    }
+
+    private static void gettingElements(LinkedList<String> list) {
+        System.out.println("Retrieved Element = " + list.get(4)); //O(n)
+
+        System.out.println("First Element = " + list.getFirst());
+        System.out.println("Last Element = " + list.getLast());
+
+        System.out.println("Darwin is at position : " + list.indexOf("Darwin"));
+        System.out.println("Melbourne is at position : " + list.lastIndexOf("Melbourne"));
+
+        //Queue retrieval method
+        System.out.println("Element from element() = " + list.element());
+
+        //Stack retrieval method
+        System.out.println("Element from peek() = " + list.peek());
+        System.out.println("Element from peekLast() = " + list.peekLast());
+        System.out.println("Element from peekFirst() = " + list.peekFirst());
+
+    }
+
+    public static void printItinerary(LinkedList<String> list) {
+        System.out.println("Trip starts at " + list.getFirst());
+        for (int i = 1; i < list.size(); i++) {
+            System.out.println("---> From: " + list.get(i-1) + " to " + list.get(i));
+//            ---> From: Alice Springs to Brisbane
+//            ---> From: Brisbane to Darwin
+//            ---> From: Darwin to Canberra
+//            ---> From: Canberra to Sydney
+//            ---> From: Sydney to Hobart
+//            ---> From: Hobart to Melbourne
+//            ---> From: Melbourne to Toowoomba
+        }
+        System.out.println("Trip ends at " + list.getLast());
+    }
+
+    public static void printItinerary2(LinkedList<String> list) {
+        System.out.println("Trip starts at " + list.getFirst());
+        String previousTown = list.getFirst();
+        for (String town : list){
+            System.out.println("---> From: " + previousTown + " to " + town);
+            previousTown = town;
+            //Same output
+        }
+        System.out.println("Trip ends at " + list.getLast());
+    }
+
+    public static void printItinerary3(LinkedList<String> list) {
+        System.out.println("Trip starts at " + list.getFirst());
+        String previousTown = list.getFirst();
+        ListIterator<String> iterator = list.listIterator(1);
+        while (iterator.hasNext()){
+            var town = iterator.next();
+            System.out.println("---> From: " + previousTown + " to " + town);
+            previousTown = town;
+            //Same output
+        }
+        System.out.println("Trip ends at " + list.getLast());
     }
 }
