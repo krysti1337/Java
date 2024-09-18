@@ -37,6 +37,9 @@ public class Main {
                 case "L" -> {
                     listPlaces(city);
                 }
+                case "M" -> {
+                    printMenu();
+                }
                 case "Q" -> {
                     flag = false;
                 }
