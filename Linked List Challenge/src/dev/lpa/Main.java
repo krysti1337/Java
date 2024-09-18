@@ -25,7 +25,7 @@ public class Main {
 
         while (flag) {
             System.out.println("Introduceți o comandă:");
-            String input = s.nextLine().toUpperCase();
+            String input = s.nextLine().toUpperCase().substring(0, 1);
 
             switch (input) {
                 case "F" -> {
@@ -42,7 +42,7 @@ public class Main {
                 }
                 default -> {
                     System.out.println("Instructiune falsa");
-                break;
+                    break;
                 }
 
             }
@@ -88,7 +88,7 @@ public class Main {
 
         ListIterator<CityAndDistance> iterator = city.listIterator(0);
         System.out.println("From Sydney");
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             CityAndDistance nextCity = iterator.next();
             String nextCityName = nextCity.getCityName();
             int nextDistance = nextCity.getDistance();
