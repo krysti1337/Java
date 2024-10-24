@@ -8,6 +8,7 @@ public class Main {
 
     private static ListIterator<CityAndDistance> iterator = null;
 
+
     public static void main(String[] args) {
         LinkedList<CityAndDistance> city = new LinkedList<>(); //creaza linkedList
 
