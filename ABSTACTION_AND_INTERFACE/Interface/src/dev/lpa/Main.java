@@ -1,5 +1,8 @@
 package dev.lpa;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -27,6 +30,14 @@ public class Main {
         double milesTraveled = kmsTraveled * FlightEnable.KM_TO_MILES;
         System.out.printf("The truck traveled %.2f km or %.2f miles %n",
                 kmsTraveled, milesTraveled);
+
+        ArrayList<FlightEnable> fliers = new ArrayList<>();
+
+        fliers.add(bird);
+
+        List<FlightEnable> betterFliers = new ArrayList<>();
+        betterFliers.add(bird);
+        
     }
 
     private static void inFlight(FlightEnable flier){

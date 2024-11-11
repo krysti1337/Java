@@ -1,5 +1,61 @@
 package dev.lpa;
 
+enum FlightStages implements Trackable{GROUNDED, LAUNCH, CURISE, DATA_COLLECITON;
+
+
+    @Override
+    public void track() {
+        if (this != GROUNDED){
+            System.out.println("Monitoring " + this);
+        }
+    }
+}
+
+record DragonFly(String name, String type) implements  FlightEnable{
+
+
+    @Override
+    public void takeOff() {
+
+    }
+
+    @Override
+    public void land() {
+
+    }
+
+    @Override
+    public void fly() {
+
+    }
+}
+
+class Satellite implements OrbitEarth{
+
+    public void achieveOrbit(){
+        System.out.println("Orbit achieved !");
+    }
+
+    @Override
+    public void takeOff() {
+
+    }
+
+    @Override
+    public void land() {
+
+    }
+
+    @Override
+    public void fly() {
+
+    }
+}
+interface OrbitEarth extends FlightEnable{
+
+    void achieveOrbit();
+}
+
 interface FlightEnable{
 
     public static final double MILES_TO_KM = 1.60934;
