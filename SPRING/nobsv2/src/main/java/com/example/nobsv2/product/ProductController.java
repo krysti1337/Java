@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.*;
 public class ProductController {
 
     @PostMapping
-    public String createProduct(){
-        return "Product Create";
-    }
+    public String createProduct(){return "Product Create";}
 
     @GetMapping
     public String getProduct(){

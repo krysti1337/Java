@@ -8,8 +8,6 @@ public class Nobsv2Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Nobsv2Application.class, args);
-		System.out.println("hello world");
 	}
 
 }
-
