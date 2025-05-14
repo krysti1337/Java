@@ -12,13 +12,16 @@ import net.sf.dynamicreports.report.builder.DynamicReports;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperPrint;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import static net.sf.dynamicreports.report.builder.DynamicReports.*;
 
 public class HolidayReportGenerator {
-    public void generate(List<Holiday> holidays, String outputPath) throws DRException {
+    public void generate(List<Holiday> holidays, String outputPath) throws DRException, FileNotFoundException {
         StyleBuilder boldStyle = stl.style().bold();
         StyleBuilder titleStyle = stl.style(boldStyle)
                 .setFontSize(16)
@@ -34,24 +37,16 @@ public class HolidayReportGenerator {
         for (Holiday h : holidays) {
             dataSource.add(h.getCountry(), h.getName(), h.getDate().format(formatter));
         }
-
-        JasperPrint jasperPrint = new JasperPrint();
-        jasperPrint = report()
-                .setPageFormat(PageType.A4)
-                .columns(countryCol, nameCol, dateCol)
-                .title(cmp.text("Holiday Report 2021").setStyle(titleStyle))
-                .pageFooter(cmp.pageXofY())
-                .setDataSource(dataSource)
-                .toJasperPrint();
-
-        try {
-            JasperExportManager.exportReportToPdfFile(jasperPrint, outputPath);
+        try (OutputStream outputStream = new FileOutputStream("HolidayReport.pdf")) {
+            report()
+                    .setPageFormat(PageType.A4)
+                    .columns(countryCol, nameCol, dateCol)
+                    .title(cmp.text("Holiday Report 2021").setStyle(titleStyle))
+                    .pageFooter(cmp.pageXofY())
+                    .setDataSource(dataSource)
+                    .toPdf(outputStream);
         } catch (Exception e) {
             throw new DRException("Failed to export PDF", e);
         }
+        }
     }
-
-    private ComponentBuilder<?, ?> title(String text) {
-        return cmp.text(text);
-    }
-}
