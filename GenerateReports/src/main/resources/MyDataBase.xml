@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<year value="2021">
+  <holidays>
+    <holiday>
+      <country>Italia</country>
+      <date>01/01/2021</date>
+      <name>Capodanno</name>
+    </holiday>
+    <holiday>
+      <country>Italia</country>
+      <date>06/01/2021</date>
+      <name>Epifania</name>
+    </holiday>
+    <holiday>
+      <country>Italia</country>
+      <date>04/04/2021</date>
+      <name>Pasqua</name>
+    </holiday>
+    <holiday>
+      <country>Italia</country>
+      <date>05/04/2021</date>
+      <name>Pasquetta (Lunedì di Pasqua)</name>
+    </holiday>
+    <holiday>
+      <country>Italia</country>
+      <date>25/04/2021</date>
+      <name>Festa della Liberazione d'Italia</name>
+    </holiday>
+    <holiday>
+      <country>Italia</country>
+      <date>01/05/2021</date>
+      <name>Festa del lavoro o festa dei lavoratori</name>
+    </holiday>
+    <holiday>
+      <country>Italia</country>
+      <date>02/06/2021</date>
+      <name>Festa della Repubblica Italiana</name>
+    </holiday>
+
+    <!-- Moldova Holidays -->
+    <holiday>
+      <country>Moldova</country>
+      <date>01/01/2021</date>
+      <name>Anul Nou</name>
+    </holiday>
+    <holiday>
+      <country>Moldova</country>
+      <date>08/03/2021</date>
+      <name>Ziua Internațională a Femeii</name>
+    </holiday>
+    <holiday>
+      <country>Moldova</country>
+      <date>27/08/2021</date>
+      <name>Ziua Independenței</name>
+    </holiday>
+    <holiday>
+      <country>Moldova</country>
+      <date>31/08/2021</date>
+      <name>Limba Noastră</name>
+    </holiday>
+  </holidays>
+</year>
