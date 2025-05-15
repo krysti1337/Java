@@ -27,6 +27,7 @@ public class Main {
         try {
             HolidayVisualReportGenerator generator = new HolidayVisualReportGenerator();
             JasperPrint jp = generator.buildChartAndCrosstabReport(holidays);
+
             JasperExportManager.exportReportToPdfFile(jp, basePath + "HolidayChartAndCrosstabReport.pdf");
             System.out.println("'HolidayChartAndCrosstabReport.pdf' was exported successfully.");
         } catch (Exception e) {
