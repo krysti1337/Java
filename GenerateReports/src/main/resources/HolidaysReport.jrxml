@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created for JRBeanCollectionDataSource -->
+<jasperReport  name="HolidayReport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d9f2a6de-ffd9-48f3-b2a3-07d21bd97371">
+
+    <field name="name" class="java.lang.String"/>
+    <field name="date" class="java.lang.String"/>
+    <field name="country" class="java.lang.String"/>
+
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="0" width="555" height="30" uuid="title"/>
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Holiday Report]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="20">
+            <staticText>
+                <reportElement x="0" y="0" width="185" height="20" uuid="ch1"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Country]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="185" y="0" width="185" height="20" uuid="ch2"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Date]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="370" y="0" width="185" height="20" uuid="ch3"/>
+                <textElement><font isBold="true"/></textElement>
+                <text><![CDATA[Name]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="185" height="20" uuid="tf1"/>
+                <textFieldExpression><![CDATA[$F{country}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="185" y="0" width="185" height="20" uuid="tf2"/>
+                <textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="370" y="0" width="185" height="20" uuid="tf3"/>
+                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+</jasperReport
+            >

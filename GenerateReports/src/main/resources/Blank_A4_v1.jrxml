@@ -1,0 +1,105 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="Blank_A4" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9ef69f5-2f19-49ba-8844-3e40d754f6f9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyDataBase"/>
+	<query language="xPath"><![CDATA[/Year-2021/holydays]]></query>
+	<field name="COUNTRY" class="java.lang.String">
+		<description><![CDATA[COUNTRY]]></description>
+		<property name="net.sf.jasperreports.xpath.field.expression" value="COUNTRY"/>
+	</field>
+	<field name="DATE" class="java.lang.String">
+		<description><![CDATA[DATE]]></description>
+		<property name="net.sf.jasperreports.xpath.field.expression" value="DATE"/>
+	</field>
+	<field name="NAME" class="java.lang.String">
+		<description><![CDATA[NAME]]></description>
+		<property name="net.sf.jasperreports.xpath.field.expression" value="NAME"/>
+	</field>
+	<group name="COUNTRY">
+		<expression><![CDATA[$F{COUNTRY}]]></expression>
+	</group>
+	<group name="DATE">
+		<expression><![CDATA[$F{DATE}]]></expression>
+	</group>
+	<group name="NAME">
+		<expression><![CDATA[$F{NAME}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch">
+		<element kind="textField" uuid="f479b90d-493b-482b-8f2d-5ee2fbf8c24c" x="157" y="10" width="241" height="41">
+			<expression><![CDATA["Text Field"]]></expression>
+		</element>
+	</title>
+	<columnHeader height="61" splitType="Stretch"/>
+	<detail>
+		<band height="174" splitType="Stretch">
+			<element kind="textField" uuid="e8aa4568-6a3b-4200-88e3-88a021046ffb" x="10" y="30" width="100" height="30">
+				<expression><![CDATA[$F{COUNTRY}]]></expression>
+			</element>
+			<element kind="textField" uuid="d4dbdc5a-ecee-45f9-b0c3-6d79d325b7a6" x="220" y="30" width="100" height="30">
+				<expression><![CDATA[$F{DATE}]]></expression>
+			</element>
+			<element kind="textField" uuid="0034abc3-50ef-4c70-a94f-697f573bd7ae" x="420" y="30" width="100" height="30">
+				<expression><![CDATA[$F{NAME}]]></expression>
+			</element>
+			<element kind="component" uuid="26115d3c-a18c-4cb5-88b5-6d1e3d3678ad" x="140" y="20" width="291" height="130">
+				<component kind="table">
+					<datasetRun uuid="f652849c-f66f-4460-80f5-45bec4cd59f3" subDataset="Dataset1">
+						<dataSourceExpression><![CDATA[$P{REPORT_DATA_SOURCE}]]></dataSourceExpression>
+					</datasetRun>
+					<column kind="single" uuid="3726b1b7-fb1b-423b-b54a-eed5a5e2683e" width="97">
+						<tableHeader height="30" style="Table 1_TH"/>
+						<tableFooter height="30" style="Table 1_TH"/>
+						<columnHeader height="30" style="Table 1_CH">
+							<element kind="staticText" uuid="8527cc57-74ae-4f98-ab6f-67adbefc93cc" x="0" y="0" width="97" height="30">
+								<text><![CDATA[COUNTRY]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" style="Table 1_CH"/>
+						<detailCell height="30" style="Table 1_TD">
+							<element kind="textField" uuid="70b02b34-971e-4ca8-b2b8-7ad941c91e44" x="0" y="0" width="97" height="30">
+								<expression><![CDATA[$F{COUNTRY}]]></expression>
+							</element>
+						</detailCell>
+					</column>
+					<column kind="single" uuid="b70611cf-9ce5-49f5-8564-cc522556e87b" width="97">
+						<tableHeader height="30" style="Table 1_TH"/>
+						<tableFooter height="30" style="Table 1_TH"/>
+						<columnHeader height="30" style="Table 1_CH">
+							<element kind="staticText" uuid="e7461523-fa95-4577-b30c-7f81f1ca51d5" x="0" y="0" width="97" height="30">
+								<text><![CDATA[DATE]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" style="Table 1_CH"/>
+						<detailCell height="30" style="Table 1_TD">
+							<element kind="textField" uuid="5466765c-8d38-4362-a9d5-b570ba8ca2dc" x="0" y="0" width="97" height="30">
+								<expression><![CDATA[$F{DATE}]]></expression>
+							</element>
+						</detailCell>
+					</column>
+					<column kind="single" uuid="5e2e299a-99b3-4b3c-ad66-4e62c60dd10b" width="97">
+						<tableHeader height="30" style="Table 1_TH"/>
+						<tableFooter height="30" style="Table 1_TH"/>
+						<columnHeader height="30" style="Table 1_CH">
+							<element kind="staticText" uuid="3a40f114-81e7-48ff-910c-884136cfe186" x="0" y="0" width="97" height="30">
+								<text><![CDATA[NAME]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" style="Table 1_CH"/>
+						<detailCell height="30" style="Table 1_TD">
+							<element kind="textField" uuid="bddc351f-7f4c-4d1e-9c43-a604f9c7cb38" x="0" y="0" width="97" height="30">
+								<expression><![CDATA[$F{NAME}]]></expression>
+							</element>
+						</detailCell>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

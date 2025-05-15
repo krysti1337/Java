@@ -1,0 +1,46 @@
+<!-- Created with Jaspersoft Studio version 7.0.2.final using JasperReports Library version 7.0.2-31532122640f516c6d17238ae0e41a08113d5ac0  -->
+<jasperReport name="Blank_A4" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9ef69f5-2f19-49ba-8844-3e40d754f6f9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyDataBase"/>
+	<query language="xPath"><![CDATA[/Year-2021/holydays]]></query>
+	<field name="COUNTRY" class="java.lang.String">
+		<description><![CDATA[COUNTRY]]></description>
+		<property name="net.sf.jasperreports.xpath.field.expression" value="COUNTRY"/>
+	</field>
+	<field name="DATE" class="java.lang.String">
+		<description><![CDATA[DATE]]></description>
+		<property name="net.sf.jasperreports.xpath.field.expression" value="DATE"/>
+	</field>
+	<field name="NAME" class="java.lang.String">
+		<description><![CDATA[NAME]]></description>
+		<property name="net.sf.jasperreports.xpath.field.expression" value="NAME"/>
+	</field>
+	<group name="COUNTRY">
+		<expression><![CDATA[$F{COUNTRY}]]></expression>
+	</group>
+	<group name="DATE">
+		<expression><![CDATA[$F{DATE}]]></expression>
+	</group>
+	<group name="NAME">
+		<expression><![CDATA[$F{NAME}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch"/>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch"/>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<element kind="textField" uuid="e8aa4568-6a3b-4200-88e3-88a021046ffb" x="10" y="30" width="100" height="30">
+				<expression><![CDATA[$F{COUNTRY}]]></expression>
+			</element>
+			<element kind="textField" uuid="d4dbdc5a-ecee-45f9-b0c3-6d79d325b7a6" x="220" y="30" width="100" height="30">
+				<expression><![CDATA[$F{DATE}]]></expression>
+			</element>
+			<element kind="textField" uuid="0034abc3-50ef-4c70-a94f-697f573bd7ae" x="420" y="30" width="100" height="30">
+				<expression><![CDATA[$F{NAME}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
