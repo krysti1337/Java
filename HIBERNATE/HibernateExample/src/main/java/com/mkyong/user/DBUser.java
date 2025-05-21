@@ -43,7 +43,7 @@ public class DBUser implements  java.io.Serializable{
         this.username = username;
     }
 
-    @Column(name = "CREATE_BY", nullable = false, length = 20)
+    @Column(name = "CREATED_BY", nullable = false, length = 20)
     public String getCreatedBy() {
         return this.createdBy;
     }
