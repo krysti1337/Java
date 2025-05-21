@@ -6,7 +6,11 @@ public class Main {
 
         Solution solution = new Solution();
         String s = "()[]{}";
-        solution.isValid(s);
+        String s2 = "]";
+        String s3 = "({})";
+        System.out.println(solution.isValid(s));
+        System.out.println(solution.isValid(s2));
+        System.out.println(solution.isValid(s3));
     }
 }
 
@@ -15,17 +19,19 @@ class Solution {
 
         Stack<Character> stack = new Stack<>();
 
-        stack.push('[');
-        stack.push(']');
-        stack.push('(');
-        stack.push(')');
-        stack.push('{');
-        stack.push('}');
 
-        for(Character c : s.toCharArray()){
-            System.out.println(c);
+        for (Character c : s.toCharArray()) {
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+            } else {
+                if (stack.isEmpty()) return false;
+                char open = stack.pop();
+                if (c == ')' && open != '(') return false;
+                if (c == '}' && open != '{') return false;
+                if (c == ']' && open != '[') return false;
+            }
         }
 
-        return true;
+        return stack.isEmpty();
     }
 }
