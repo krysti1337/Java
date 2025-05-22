@@ -4,11 +4,14 @@ import java.util.List;
 
 public class ExtractConstant {
 
+	private static final long DISCOUNT_THRESHOLD = 1000;
+	private static final long PERCENT_DISCOUNT = 5;
+
 	public String cartUid;
 
 	public long calculateCartTotal(List<Item> items) {
 		long cartSum = sumCartCosts(items);
-		long discount = caclulateDiscount(cartSum);
+		long discount = calculateDiscount(cartSum);
 		return cartSum - discount;
 	}
 
@@ -20,9 +23,9 @@ public class ExtractConstant {
 		return totalCartAmount;
 	}
 
-	private long caclulateDiscount(long cartSum) {
-		if (cartSum > 1000) { // TODO: Extract Constant: DISCOUNT_THRESHOLD
-			return cartSum / 100 * 5; // TODO: Extract Constant: PERCENT_DISCOUNT
+	private long calculateDiscount(long cartSum) {
+		if (cartSum > DISCOUNT_THRESHOLD) {
+			return cartSum / 100 * PERCENT_DISCOUNT;
 		}
 		return 0;
 	}

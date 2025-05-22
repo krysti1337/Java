@@ -15,6 +15,6 @@ public class AccountRepositoryInMemory implements AccountRepository{
 
     @Override
     public void save(Account account) {
-        store.put(account.getId(), account);
+        store.put(String.valueOf(account.getId()), account);
     }
 }

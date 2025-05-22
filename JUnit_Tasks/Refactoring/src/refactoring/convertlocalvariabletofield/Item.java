@@ -1,7 +1,7 @@
 package refactoring.convertlocalvariabletofield;
 
 public class Item {
-	long price;
+	private long price;
 
 	public long getPrice() {
 		return price;

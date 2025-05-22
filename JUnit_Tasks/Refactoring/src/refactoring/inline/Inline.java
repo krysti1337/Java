@@ -8,10 +8,7 @@ public class Inline {
 	public String cartUid;
 
 	public long calculateCartTotal(List<Item> items) {
-		long cartSum = sumCartCosts(items); // <-- TODO: Inline cartSum
-		long discount = caclulateDiscount(cartSum); // <-- TODO: Inline discount
-		long cartTotal = cartSum - discount; // <-- TODO: Inline cartTotal
-		return cartTotal; // <-- TODO: Inline cartTotal
+		return sumCartCosts(items) - calculateDiscount(sumCartCosts(items));
 	}
 
 	private long sumCartCosts(List<Item> items) { 

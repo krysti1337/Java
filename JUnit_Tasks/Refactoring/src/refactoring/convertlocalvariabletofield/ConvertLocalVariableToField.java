@@ -5,28 +5,33 @@ import java.util.List;
 public class ConvertLocalVariableToField {
 
 	private static final long PERCENT_DISCOUNT = 5;
-	public String cartUid;
+	public static String cartUid;
+
+	private long cartSum;
+	private long discount;
+	private long totalCartAmount;
+	private long cartTotal;
 
 	public long calculateCartTotal(List<Item> items) {
-		long cartSum = sumCartCosts(items); // <-- TODO: Convert Local Variable To Field: cartSum
-		long discount = caclulateDiscount(cartSum); // <-- TODO: Convert Local Variable To Field: discount
-		long cartTotal = cartSum - discount;
-		return cartTotal;
+		cartSum = sumCartCosts(items);
+		discount = calculateDiscount(cartSum);
+		return cartSum - discount;
 	}
 
 	private long sumCartCosts(List<Item> items) {
-		long totalCartAmount = 0; // <-- TODO: Convert Local Variable To Field: discount
+		totalCartAmount = 0;
 		for (Item item : items) {
 			totalCartAmount += item.getPrice();
 		}
 		return totalCartAmount;
 	}
 
-	private long caclulateDiscount(long cartSum) {
+	private long calculateDiscount(long cartSum) {
 		if (cartSum > 1000) {
 			return cartSum / 100 * PERCENT_DISCOUNT;
 		}
 		return 0;
 	}
+}
 
 }

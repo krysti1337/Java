@@ -1,17 +1,13 @@
 package com.example.banking;
 
-import java.time.LocalDate;
-import java.time.Period;
-
 public class Account {
-
-    private final String id;
-    private final String type;
+    private String id;
+    private String customerId;
     private double balance;
 
-    public Account(String id, String type, double balance) {
+    public Account(String id, String customerId, double balance) {
         this.id = id;
-        this.type = type;
+        this.customerId = customerId;
         this.balance = balance;
     }
 
@@ -19,15 +15,28 @@ public class Account {
         return id;
     }
 
-    public String getType() {
-        return type;
+    public String getCustomerId() {
+        return customerId;
     }
 
     public double getBalance() {
         return balance;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
     public void setBalance(double balance) {
         this.balance = balance;
     }
+
+    public boolean isValid() {
+        return id != null && !id.isEmpty() && customerId != null && !customerId.isEmpty() && balance >= 0;
+    }
 }
+

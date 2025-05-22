@@ -1,16 +1,14 @@
 package com.example.banking;
 
 public class Customer {
-    private final String id;
-    private final String name;
-    private final String email;
-    private final String phone;
+    private String id;
+    private String name;
+    private String email;
 
-    public Customer(String id, String name, String email, String phone) {
+    public Customer(String id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.phone = phone;
     }
 
     public String getId() {
@@ -25,7 +23,19 @@ public class Customer {
         return email;
     }
 
-    public String getPhone() {
-        return phone;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isValid() {
+        return id != null && !id.isEmpty() && name != null && !name.isEmpty() && email != null && email.contains("@");
     }
 }
